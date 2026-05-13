@@ -5,6 +5,8 @@ app.get("/", (req,res)=>{
     res.send("Hello World!")
 })
 
-app.listen(3000, (req,res)=>{
-    console.log("ポート3000で待機中...")
+const port = process.env.port || 3000
+
+app.listen(port, (req,res)=>{
+    console.log(`ポート${port}で待機中...`)
 })
